@@ -1,13 +1,10 @@
 #!/usr/bin/node
-if (parseInt(process.argv[2])){
-    for (let i = 0; i < parseInt(process.argv[2]); i++){
-        let charType = "";
-        for (let i = 0; i < parseInt(process.argv[2]); i++){
-            charType = charType + "X";
-        }
-        console.log(charType);
-    }
-}
-else{
-    console.log("Missing size");
+
+const size = parseInt(process.argv[2], 10);
+if (isNaN(size)) {
+  console.log('Missing size');
+} else {
+  for (let i = 0; i < size; i += 1) {
+    console.log('X'.repeat(size));
+  }
 }

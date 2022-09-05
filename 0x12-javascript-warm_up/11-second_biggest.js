@@ -1,20 +1,13 @@
 #!/usr/bin/node
 
-let biggest = 0;
-let i;
-const arrayNumbers = [];
-
-for (i = 2; i < process.argv.length; i++) {
-  if (Number.isNaN(parseInt(process.argv[i])) === false) {
-    arrayNumbers[i - 2] = parseInt(process.argv[i]);
+const numsArray = process.argv.slice(2);
+function secondMax (array) {
+  if (array.length < 2) {
+    return (0);
+  } else {
+    array.sort((x, y) => x - y);
+    array.pop();
+    return (array.pop());
   }
 }
-
-if (arrayNumbers.length > 1) {
-  biggest = Math.max.apply(null, arrayNumbers);
-  i = arrayNumbers.indexOf(biggest);
-  arrayNumbers[i] = -Infinity;
-  biggest = Math.max.apply(null, arrayNumbers);
-}
-
-console.log(biggest);
+console.log(secondMax(numsArray));
