@@ -1,23 +1,17 @@
 #!/usr/bin/python3
 """
-return all table values (table 'states')
-parameters given to script: username, password, database
+Lists all states from the database hbtn_0e_0_usa
 """
-
+import sys
 import MySQLdb
-from sys import argv
 
-# connect to database
-db = MySQLdb.connect(host="localhost",
-                     port=3306,
-                     user=argv[1],
-                     passwd=argv[2],
-                     db=argv[3])
+if __name__ == '__main__':
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
+                         db=sys.argv[3], port=3306)
 
-# create cursor to exec queries using SQL
-cursor = db.cursor()
-cursor.execute("SELECT * FROM states ORDER BY id ASC")
-for row in cursor.fetchall():
-    print(row)
-cursor.close()
-db.close()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states;")
+    states = cur.fetchall()
+
+    for state in states:
+        print(state)
