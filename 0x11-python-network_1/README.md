@@ -2,4 +2,4 @@
 
 ### Environment
 * Language: Python
-* OS: Ubuntu 14.04 LTS
+* OS: Ubuntu
