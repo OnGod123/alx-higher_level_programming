@@ -1,0 +1,27 @@
+
+    Prints a text with 2 new lines after each of these characters: ., ? and :
+
+    Parameters:
+    - text (str): The input text.
+
+    Returns:
+    - None
+
+    Raises:
+    - TypeError: If text is not a string.
+
+    Examples:
+    >>> text_indentation("This is a sample text. It has multiple sentences? Each separated by a period.")
+    This is a sample text
+    It has multiple sentences
+    Each separated by a period
+
+    >>> text_indentation("Another example: What is your name?")
+    Another example
+    What is your name
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+    
