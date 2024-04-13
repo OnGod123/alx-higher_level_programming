@@ -1,0 +1,37 @@
+DNS: Your Internet Phonebook
+
+DNS, or Domain Name System, acts like a phonebook for the web. It translates user-friendly website names (like [invalid URL removed]) into numerical IP addresses that computers use to locate specific websites. These IP addresses function like unique street addresses on the internet.
+
+Choosing Your Language: Protocols for Communication
+
+When sending messages over the internet, you need to choose the right protocol, which acts like a communication language between devices. Two main options exist:
+
+TCP (Transmission Control Protocol): Reliable but slower, similar to certified mail. TCP ensures data arrives correctly and in order.
+UDP (User Datagram Protocol): Prioritizes speed over guaranteed delivery, like regular mail. UDP is faster but there's a chance the message might get lost.
+AF_INET: The Addressing System
+
+AF_INET stands for Address Family, which defines the format used for IP addresses. Think of it as a specific addressing system for a particular area on the internet. The most common type is IPv4, although IPv6 is a newer version with a much larger capacity.
+
+Talking to the Server: HTTP Requests and Responses
+
+When you enter a web address in your browser, it initiates a conversation with the server using HTTP, a protocol that dictates how messages are formatted. It's like sending a request to a store assistant.
+
+The request typically specifies what you want (using terms like GET) and where to find it (using a specific location on the server called an endpoint).
+
+The server then processes your request, retrieves the information you need (like the webpage content), and sends back a response, including the data and a status code (like "200" for success).
+
+Short and Sweet Connections
+
+Unlike some protocols that maintain long-term connections, HTTP transactions are quick and to the point. The connection closes after the server delivers the requested information. This is efficient for downloading webpages but not ideal for things like real-time chat.
+
+The Firewall: Security Checkpoint
+
+Before reaching the server, data travels through a firewall, a security guard that inspects incoming and outgoing traffic. Firewalls typically examine the data packets based on pre-defined rules. These packets can be encoded in various formats like UTF-8, JSON, or ASCII, but UTF-8 is preferred for its wider language support.
+
+One common firewall function is to check for specific strings within the packet. For instance, it might block requests containing "GET [invalid URL removed]" to prevent unauthorized access to sensitive information.
+
+Load Balancing: Sharing the Workload
+
+To handle heavy traffic, servers often utilize load balancing. This technique distributes incoming requests across multiple servers, preventing any single server from becoming overloaded. Load balancing can be achieved through multithreading or asynchronous processing, ensuring smooth operation even during peak usage.
+
+I've incorporated the details about firewalls, data encoding, load balancing, and their functionalities while maintaining the original structure and avoiding plagiarism.
