@@ -1,10 +1,20 @@
 #!/usr/bin/node
-//This file prints the content of a file//
-const fs = require('fs');
+const fs = require("fs");
 
-const fileName = process.argv[2];
+const filePath = process.argv[2];
 
-fs.readFile(fileName, (err, inputD) => {
-   if (err) throw err;
-      console.log(inputD.toString());
-})
+// Check if a file path is provided
+if (!filePath) {
+  console.error('Please provide a file path as the first argument.');
+  process.exit(1);
+}
+
+// Read the file with utf-8 encoding and handle errors
+fs.readFile(filePath, 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+});
+
